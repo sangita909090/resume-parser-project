@@ -1,87 +1,67 @@
-Resume Parser Web Application (Streamlit)
-This project is a Resume Parser Web Application built using Python and Streamlit.
-It accepts a PDF resume, extracts key information, and displays the results in a web interface.
+Resume Parser System
+This project is a simple Resume Parser web application built using Python and Streamlit.
+It allows users to upload a PDF resume and automatically extracts useful details such as name, email, phone number, and skills. The main goal of this project is to understand how PDF parsing, basic NLP, and Object-Oriented Programming can be used together in a real application.
 
+Live Demo
+(Link will be added after deployment)
+https://resume-parser.streamlit.app
 
-streamlit run streamlit_app.py
- 
- Features
-Upload resume in PDF format
+What this project can do
+Upload a resume in PDF format
 
-Extracts:
+Extract candidate name
 
-Candidate Name
+Extract email address and phone number
 
-Email Address
+Identify basic technical skills
 
-Phone Number
+Show results instantly on screen
 
-Skills
-
-Built using Object-Oriented Programming (OOP)
-
-Simple and interactive Streamlit UI
-
-Deployed on Streamlit Cloud
-
-🛠️ Technologies Used
+Tools and Technologies
 Python
 
 Streamlit
 
-PyMuPDF (fitz) – PDF text extraction
+PyMuPDF (fitz)
 
-spaCy – Named Entity Recognition
+spaCy
 
-Regular Expressions (re) – Email & phone extraction
+Regular Expressions (re)
 
-Git & GitHub – Version control
-
-📂 Project Structure
+Project Files
 resume-parser-project/
 │
-├── streamlit_app.py        # Streamlit frontend
-├── resume_parser.py        # ResumeParser OOP class
-├── requirements.txt        # Project dependencies
-├── uploads/                # Temporary uploaded files
-└── README.md               # Project documentation
-⚙️ Installation & Run Locally
-1️⃣ Clone the Repository
-git clone https://github.com/sangita909090/resume-parser-project.git
-cd resume-parser-project
-2️⃣ Create Virtual Environment (Optional)
-python -m venv venv
-venv\Scripts\activate
-3️⃣ Install Dependencies
+├── streamlit_app.py    # Main Streamlit app
+├── resume_parser.py   # Resume parsing logic
+├── requirements.txt   # Libraries used
+└── uploads/            # Temporary uploaded resumes
+How to run this project on your system
+Install all required libraries:
+
 pip install -r requirements.txt
 python -m spacy download en_core_web_sm
-4️⃣ Run Streamlit App
+Start the application:
+
 streamlit run streamlit_app.py
-Open browser at:
+Open your browser and go to:
 
 http://localhost:8501
-🌐 Live Demo
-🔗 Live Application:
-(Add your Streamlit Cloud link here once deployed)
+Upload a PDF resume and view the extracted details.
 
-📌 How It Works
-User uploads a PDF resume
+How it works
+The resume PDF is read using PyMuPDF
 
-Resume text is extracted using PyMuPDF
+Text is processed using spaCy and regex
 
-Data is processed using NLP and Regex
+A Python class handles all extraction logic
 
-Extracted information is displayed in JSON format
+Streamlit displays the output in a simple web interface
 
-All logic follows OOP design principles
+Future Improvements
+Add more skill categories
 
-🎯 Future Enhancements
-Skill matching with job roles
+Improve accuracy of name detection
 
-Resume ranking system
+Save parsed data to a database
 
-Export parsed data to CSV
-
-Database integration (MySQL)
-
-Job recommendation module
+Add job role matching
