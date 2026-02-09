@@ -2,7 +2,10 @@ Resume Parser Web Application (Streamlit)
 This project is a Resume Parser Web Application built using Python and Streamlit.
 It accepts a PDF resume, extracts key information, and displays the results in a web interface.
 
-🚀 Features
+
+streamlit run streamlit_app.py
+ 
+ Features
 Upload resume in PDF format
 
 Extracts:
